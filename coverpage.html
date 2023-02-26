@@ -22,12 +22,16 @@
         border-radius: 4px;
         
     }
+    
     .caption{
+        height: 60px;
+        width: 100%;
         text-align: center;
+        font-size: 15px;
+        margin-top: 10px;
+    
     }
-    .intro{
-        margin-top: 0;
-    }
+   
     .end{
         background-color: rgb(37, 36, 36);
         /* width: 1350px;  
@@ -37,22 +41,23 @@
          
         
     }
-    .logo {
-        /* padding: 50px; */
-        border-radius: 0px;
-        /* padding: 2px; */
-        width: 100px;
-        display: flex;
-        align-items: center;
-        margin-left: 650px;
-        
-    }
-    /* h2{
+    .logo{
+    height: 50px;
+    width: 100px;
+   }
+   #intro{
+    display: flex;
+    align-content: center;
+    
+   }
+   #intro div{
         text-align: center;
-        
-        vertical-align: top;
-        
-    } */
+        font-size: 15px;
+        align-content: center;
+        align-items: center;
+        margin:10px;
+        width: 100%;
+   }
     
       .imageslider{
         width:100%;
@@ -60,8 +65,7 @@
         background-image: url("https://i.pinimg.com/originals/f2/d2/ee/f2d2ee07809be8f0139fb12071bb4d28.gif");
         border-radius: 10px;
         background-size: 100% 100%;
-        
-        /* animation: changeimage 20s linear infinite; */
+    
         
 
     }
@@ -318,7 +322,12 @@
         box-shadow: 0 0 5px black;
         transform:translate(0, -10px);
     }
-    .disney{
+    @media screen and (min-width:767px){
+        
+    
+    #disney{
+        background-color: black;
+        display:flex;
         height:400px;
         background-color: white;
         margin:10px 0 80px 0;
@@ -338,6 +347,7 @@
     position: relative;
     right:0;
     z-index: 0;
+    overflow: hidden;
    }
    .mo{
     overflow: visible;
@@ -364,6 +374,7 @@
         box-shadow: 0 0 5px black;
         /* transform:translate(0, -10px); */
    }
+}
     .music{
         align-items: center;
         justify-content: center;
@@ -391,13 +402,23 @@
         font-family: "Lucida Console", "Courier New", monospace;
     }
      .shop{
+        border-radius: 0px;
+        width: 200px;
+        height: 200px;
+        /* display: flex;
+        align-items: center;
+        justify-self: center; */
+        
+        border-radius: 3px;
+      
+    }  
+    .shopbg{
         background-image: url("https://cdn.shopify.com/s/files/1/1002/7150/files/Marvel-Designs-Collection-banner-456.jpg?v=1632822779");
         background-repeat: no-repeat;
-        /* background-attachment: fixed;  */
-        background-size:contain;
-        border-radius: 3px;
-        margin: 0 5px 0 15px;
-    } 
+        background-size:cover;
+        height: 100%;
+        width: 100%;
+    }
     .shop:hover{
         transform: scale(1.02);
         transition:transform .7s ease;
@@ -415,7 +436,7 @@
     }
     .more{
         height:500px;
-        margin:80px 20px 50px 10px;
+        margin:250px 20px 50px 10px; 
         
     }
     ._{
@@ -734,32 +755,50 @@
    }.youtube{
     margin-left:10px;
    }
+
+   .logo{
+    height: 50px;
+    width: 100px;
+   }
+   #intro{
+    display: flex;
+    align-content: center;
+    
+   }
+   #intro div{
+        text-align: center;
+        font-size: 15px;
+        align-content: center;
+        align-items: center;
+        margin:10px;
+        width: 100%;
+   }
+   
    
 </style>
 <body>
     
 
     <div class="first-page"  >
-        <div class="intro" style="display:flex; justify-content: space-between; align-items:center; margin:0 20px">
+        <div class="abc">
        
-        <div style="float: left; margin-top: 20px;"> 
-        <div >
-        <a href="http://127.0.0.1:5500/login.html" target="" style=" background-color: red;border:5px;border-color: black; border-radius: 4px;padding: 3px; " >SIGN IN</a>
+        <div id="intro"> 
+        <div class="left" style="align-items: center;">
+        <a href="http://127.0.0.1:5500/login.html" target="" style="background-color: red;border:5px;border-color: black; border-radius: 4px;padding: 3px; " >SIGN IN</a>
         </div>
-        <div style="display:flex;">
+        <div >
         <img class="logo"  src="https://www.freepnglogos.com/uploads/marvel-logo-png/marvel-logo-hd-5.png" >
         </div>
-        <!-- </div> -->
-        </div>
-        <div style="float: right;">
+        <div class="right">
         <a href="http://127.0.0.1:5500/about.html" target="" style=" background-color: red;border:5px;border-color: black; border-radius: 4px;padding: 3px;">ABOUT</a>
         <a href="https://www.marvel.com/movies" target="-blank" style="background-color: red;border: 5px; border-color: black; border-radius: 4px;padding: 3px;">MOVIES</a>
         <a href="https://www.marvel.com/characters" target="-blank" style="background-color: red; border-radius: 4px;padding: 3px;">CHARACTER</a>
         </div>
-        
+        </div>
     </div>
-        <h2 class="caption">  Cause if we can’t protect the Earth, <br>you can be damn sure we’ll<span style="color:red"> avenge</span> it.</h2>
-        
+    <div class="caption">
+        <h2 > Cause if we can’t protect the Earth, <br>you can be damn sure we’ll<span style="color:red"> avenge</span> it.</h2>
+        </div>
         <div class="imageslider" style="position:centre;">
 
         </div>
@@ -816,7 +855,8 @@
                 
                 
                </div>
-         <div class="disney" style="display:grid; grid-template-columns: auto auto auto;" >
+               
+         <div id="disney" >
             <div class="dm">
                 <p class="mo" style="position:absolute; z-index:2;"> A UNIVERSE OF SUPER HEROES</p>
                 <p class="start" style="position:absolute; z-index:2">All Your Favorite Stories And More. Start Streaming Now. </p>
@@ -825,27 +865,29 @@
           <div class="plus">
 
           </div>  
-         </div>       
+         </div>
                 
                 
                 
                 
-        <div class="shop">
+          <div class="shop" style="display:grid;grid: auto auto auto;">      
+        <div class="shopbg" >
+            <!-- <img src="https://cdn.shopify.com/s/files/1/1002/7150/files/Marvel-Designs-Collection-banner-456.jpg?v=1632822779"> -->
+            
             <div class="brand"  >
                 <div class="b">
          <p  style="text-align: center;"> MERCHANDISE</p> 
                     </div>
-         <div style="margin-top: 50px; margin-left:10px; display: flex; justify-content: center; align-content: center;">
+         <div style=" display: flex; justify-content: center; align-content: center;">
         <button  onclick="window.location.href='https://www.thesouledstore.com/marvel-clothing';", class="button1"></button> 
         <button onclick="window.location.href='https://www.shopdisney.com/marvel-content/';", class="button2"></button>
         <button onclick="window.location.href='https://www.bewakoof.com/marvel-merchandise';", class="button3"></button>
         </div>
-        <div class="all" style="margin-top: 100px; margin-left:10px; display: flex; justify-content: center; align-content: center;">
-        <button onclick="window.location.href='https://www.shopdisney.com/franchises/marvel/';",class="button4"></button>
-        </div>
-       
-            <!-- <button onclick="https://www.shopdisney.com/franchises/marvel/;",class="button4"></button> -->
         
+    
+            
+        
+            </div>
             </div>
             </div>
             <div class="more">
