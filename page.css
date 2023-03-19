@@ -1,0 +1,763 @@
+*{
+    margin: 0;
+    padding: 0;
+   } 
+    
+    body{
+        border:20px solid transparent ;
+        /* padding:15px; */
+        border-image: url("https://wallpaperaccess.com/full/4065694.jpg") 70 round ;
+        
+        border-radius: 4px;
+        
+    }
+    
+    .caption{
+        height: 60px;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 10px;
+    
+    }
+   
+    .end{
+        background-color: rgb(37, 36, 36);
+        /* width: 1350px;  
+        height: 200px; */
+        padding:50px;
+        margin:0px 0px 0 0px;
+         
+        
+    }
+    .logo{
+    height: 50px;
+    width: 100px;
+   }
+   #intro{
+    display: flex;
+    align-content: center;
+    
+   }
+   #intro div{
+        text-align: center;
+        font-size: 15px;
+        align-content: center;
+        align-items: center;
+        margin:10px;
+        width: 100%;
+   }
+    
+      .imageslider{
+        width:100%;
+        height: 500px;
+        background-image: url("https://i.pinimg.com/originals/f2/d2/ee/f2d2ee07809be8f0139fb12071bb4d28.gif");
+        border-radius: 10px;
+        background-size: 100% 100%;
+    
+        
+
+    }
+   
+    a:link{
+        text-decoration: none;
+    }
+
+
+    .button1 {
+        margin-top: 5px;
+        background-image: url('https://play-lh.googleusercontent.com/DM2HmBu_PCO98Q0yMADnEa9P_-ACOX_aekM601jeUrxph67vY6a9DtvtoGL9jcPYMx8');
+        background-size: contain;
+        width: 60px; 
+        height: 60px;
+        border: 0px;
+
+    }
+    .button1:hover{
+        box-shadow: 0 12px 16px 0 rgba(234, 63, 63, 0.64), 0 17px 50px 0 rgba(232, 94, 94, 0.19);
+    }
+    .button2{
+        margin-left: 10px;
+        align-self: flex-end;
+        background-image: url('data:image/png;base64,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');
+        background-size:contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 60px;
+        border: 0px;
+    }
+    .button2:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.64), 0 30px 70px 0 rgba(0,0,0,0.59);
+    }
+    .button3{
+        margin-left: 10px;
+        align-self: flex-end;
+        background-image: url('https://thoughtoverdesign.com/wp-content/uploads/2022/05/after01-1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 60px;
+        border: 0px;              
+    }
+    .button3:hover{
+        box-shadow: 0 12px 16px 0 rgba(226, 219, 16, 0.603), 0 17px 50px 0 rgba(217, 224, 32, 0.762);
+    }
+    
+    .last{
+        border-radius: 0px;
+        padding: 2px;
+        width: 200px;
+        height: 100px;
+    }
+    .follow{
+        font-size: 20px;
+        text-indent: 100px;
+        color: rgb(255, 255, 255);
+     } 
+    /* .social-media > ul li{
+        list-style: none;
+    }
+    .info-mation > ul li{
+        list-style:none ;
+    } */
+    
+    ul{
+        list-style: none;
+        margin:0 0 10px 0;
+    }
+    a:link, a:visited {
+    color: white;
+    }
+    .middle{
+    /* width: 80%;  */
+    /* width:1000px;  */
+    border-radius: 4px;
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    height: 400px;
+    margin: -50px 30px 50px 30px;
+    overflow-x: auto;
+    
+    
+   
+    }
+    .middle p{
+        text-align: center;
+        margin-top: 10px;
+    }
+    /* .flow{
+        overflow: hidden;
+        overflow-x: auto;
+    } */
+    
+    /* .latest-movies{
+        text-decoration: wavy;
+    } */
+    .ant-man{
+        margin-left:10px; 
+        margin-top: 20px;
+        background-image: url('https://sportshub.cbsistatic.com/i/2022/10/24/3fe2ecc3-2100-4f7e-951a-aabe1782372d/ant-man-and-the-wasp-quantumania-poster.jpg?auto=webp&width=1688&height=2500&crop=0.675:1,smart');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border:0px;
+        height:290px;
+        width: 193px;
+    }
+    .ant-man:hover{
+        box-shadow: 0 0 5px black;
+        /* margin-top: -10px; */
+        transform: translate(0, -10px);
+    }
+    .gaura{
+        margin-top:20px;
+        margin-left: 10px; 
+        align-self: flex-end;
+        background-image: url('https://m.media-amazon.com/images/M/MV5BNmFlMThmYTYtOWNhMi00N2Y5LTljZWItMWQxN2U5OTA5MmFjXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_FMjpg_UX1000_.jpg'); 
+        background-repeat: no-repeat;
+        background-size: contain;
+        border:0px;
+        height:290px;
+        width: 195px;
+    } 
+    .gaura:hover{
+        box-shadow: 0 0 5px black;
+        transform: translate(0, -10px);
+    }
+    .marvels{
+        margin-top:20px;
+        margin-left:10px;
+        align-self: flex-end;
+        background-image: url('https://m.media-amazon.com/images/M/MV5BNjQ4NzQ2MmUtMTUwYi00ZTVhLWI5Y2MtYWM3ZmM5MTc1OGEyXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border:0px;
+        height:290px;
+        width: 196px;
+
+    }
+    .marvels:hover{
+        box-shadow: 0 0 5px black;
+        transform: translate(0, -10px); 
+    }
+    .deadpool{
+        margin-top:20px;
+        margin-left:10px;
+        align-self: flex-end;
+        background-image: url('https://cdn.kinocheck.com/images/w275/153ss35g5t.jpg');
+        background-repeat: no-repeat;
+        background-size:contain;
+        border:0px;
+        height:290px;
+        width: 195px;
+    }
+    .deadpool:hover{
+        box-shadow: 0 0 5px black;
+        transform: translate(0, -10px); 
+    }
+    .blade{
+        margin-top:20px;
+        margin-left:10px;
+        align-self: flex-end;
+        background-image: url('https://d32qys9a6wm9no.cloudfront.net/images/movies/poster/d2/7f0d2c34a30f30e3b8b46b331b42eed8_300x442.jpg?t=1672341711');
+        background-repeat: no-repeat;
+        background-size:cover;
+        border:0px;
+        height:290px;
+        width: 195px;
+    }
+    .blade:hover{
+        box-shadow: 0 0 5px black;
+        transform: translate(0, -10px); 
+    }
+    .secret-wars{
+        margin-top:20px;
+        margin-left:10px;
+        align-self: flex-end;
+        background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0fab7088-91f2-4eca-b87c-e9ba97746fb6/df9uisa-5fb59753-5bc8-4be3-a251-77117ec2a8d9.png/v1/fill/w_1280,h_1968,q_80,strp/avengers_secret_wars_poster_by_super_frame_df9uisa-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTk2OCIsInBhdGgiOiJcL2ZcLzBmYWI3MDg4LTkxZjItNGVjYS1iODdjLWU5YmE5Nzc0NmZiNlwvZGY5dWlzYS01ZmI1OTc1My01YmM4LTRiZTMtYTI1MS03NzExN2VjMmE4ZDkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Tbd4ZIwt1-ifWx5h-C2MALM88vq6tRvBEnbiAOQfqIM');
+        background-repeat: no-repeat;
+        background-size:contain;
+        border:0px;
+        height:290px;
+        width: 189px;
+    }
+    .secret-wars:hover{
+        box-shadow: 0 0 5px black;
+        transform: translate(0, -10px); 
+    }
+    /* .caption-ant{
+        font-weight:900;  
+    
+    }  */
+    .fan4{
+        margin-top:20px;
+        margin-left:10px;
+        align-self: flex-end;
+        background-image: url('https://m.media-amazon.com/images/M/MV5BZjZiNmYwYWItNzg4ZC00ZGI5LTlmMjAtMzUyMjlkYzk2NmJkXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_FMjpg_UX1000_.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        border:0px;
+        height:290px;
+        width: 189px;
+    }
+    .fan4:hover{
+        box-shadow: 0 0 5px black;
+        transform: translate(0, -10px);
+    }
+    .thunder{
+        margin-top:20px;
+        margin-left:10px;
+        align-self: flex-end;
+        background-image: url('https://i.pinimg.com/originals/2a/8f/2a/2a8f2ad2c2436f1ba46f3ce9c2ca493e.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        border:0px;
+        height:290px;
+        width: 189px;
+
+    }
+    .thunder:hover{
+        box-shadow: 0 0 5px black;
+        transform:translate(0, -10px);
+    }
+    .kang{
+        margin-top:20px;
+        margin-left:10px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-image: url('https://preview.redd.it/20gqf9zk2xr51.jpg?width=1500&format=pjpg&auto=webp&s=0a8cf7c481c434a78c4a5b18e4040d26d7f44725');
+        background-repeat: no-repeat;
+        background-size:cover;
+        border:0px;
+        height:290px;
+        width: 189px;
+    }
+    .kang:hover{
+        box-shadow: 0 0 5px black;
+        transform:translate(0, -10px);
+    }
+    .america{
+        margin-top:20px;
+        margin-left:10px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aa454069-1f38-4db1-a9e3-75d6b00c42e8/dfd11ey-d0bb7a4c-2407-422f-b732-a94a20207ec9.jpg/v1/fill/w_748,h_1069,q_70,strp/captain_america_new_world_order_poster_by_akithefull_dfd11ey-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTgyOSIsInBhdGgiOiJcL2ZcL2FhNDU0MDY5LTFmMzgtNGRiMS1hOWUzLTc1ZDZiMDBjNDJlOFwvZGZkMTFleS1kMGJiN2E0Yy0yNDA3LTQyMmYtYjczMi1hOTRhMjAyMDdlYzkuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.5fuzc0ogoNFwGd8YiSvAhuH736WukPKynG4V16KmrD4');
+        background-repeat: no-repeat;
+        background-size:cover;
+        border:0px;
+        height:290px;
+        width: 189px;
+    }
+    .america:hover{
+        box-shadow: 0 0 5px black;
+        transform:translate(0, -10px);
+    }
+    @media  (min-width:767px){
+        
+    
+    #disney{
+        background-color: black;
+        display:flex;
+        height:400px;
+        background-color: white;
+        margin:10px 0 80px 0;
+    }
+   .dm{
+    background-image:url('https://thedisinsider.com/wp-content/uploads/2020/12/marvel-disney.jpg');
+    background-size: cover;
+    height:400px;
+    width: 900px;
+   }
+   .plus{
+    background-image: url('https://i.insider.com/5da8790acc4a0a4bdd1d00a3?width=1136&format=jpeg');
+    opacity:0.9;
+    background-size:cover;
+    height:400px;
+    width:580px;
+    position: relative;
+    right:0;
+    z-index: 0;
+    overflow: hidden;
+   }
+   .mo{
+    overflow: visible;
+    font-size: 40px;
+    color: white;
+    margin:7rem -5rem 7rem 25rem; 
+    font-family: "Times New Roman", Times, serif;
+   }
+   .start{
+    font-size:15px;
+    color:white;
+    margin:150px -80px 70px 400px;
+    font-family: Arial, Helvetica, sans-serif; 
+   }
+   .stream{
+    font-size: 15px;
+    background-color: rgb(171, 10, 10);
+    height:45px;
+    width:110px;
+    margin:310px -80px 70px 750px;
+    border-radius:10px ;
+   }
+   .stream:hover{
+        box-shadow: 0 0 5px black;
+        /* transform:translate(0, -10px); */
+   }
+}
+    .music{
+        align-items: center;
+        justify-content: center;
+        margin:0px 20px 100px 20px;
+    } 
+  
+    .m{
+        /* margin-top: 10px;
+        margin-left: 500px; */
+        text-align: center;
+        font-size: 30px;
+        color:rgb(211, 4, 4);
+        font-family: "Lucida Console", "Courier New", monospace;
+        
+    }
+    /* .mus{
+        background-color: antiquewhite;
+    } */
+    .b{
+        /* margin-top: 5px;
+        margin-left: 40px; */
+        text-align: center;
+        font-size: 30px;
+        color:rgb(211, 4, 4);
+        font-family: "Lucida Console", "Courier New", monospace;
+    }
+     .shop{
+        border-radius: 0px;
+        height: 600px;
+        
+        border-radius: 3px;
+        background-image: url("https://cdn.shopify.com/s/files/1/1002/7150/files/Marvel-Designs-Collection-banner-456.jpg?v=1632822779");
+        background-repeat: no-repeat;
+        background-size:cover;
+        margin:0 20px 0 20px;
+       
+    
+
+      
+    }  
+    
+    .shop:hover{
+        transform: scale(1.02);
+        transition:transform .7s ease;
+    }
+    .brand{
+        background-color: rgb(251, 232, 232);
+        opacity: .8;
+        border-radius: 5px;
+        height: 400px;
+        width: 300px;
+        float: right; 
+        margin-left: 30px;
+    }
+    .brand:hover{
+        box-shadow:0 0 10px rgb(203, 33, 33);
+    }
+    .more{
+        height:500px;
+        margin:30px 20px 50px 10px; 
+        
+    }
+    ._{
+        overflow:hidden;
+        overflow-x: scroll;
+    }
+    .sm{
+        text-align: center;
+        font-size: 30px;
+        color:rgb(211, 4, 4);
+        font-family: "Lucida Console", "Courier New", monospace;
+    }
+    
+    ._ p{
+        text-align: center;
+        color: rgb(174, 9, 9);
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    ._ button:hover{
+        transform: scale(1.02);
+        transition:transform .7s ease;
+    }
+    .toys{
+        background-image: url('https://i.pinimg.com/564x/5f/cb/ed/5fcbedd8203f90a7bb5b48b6b50ea701.jpg');
+        margin-top:20px;
+        margin-left:40px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover;
+        border-radius: 4px;
+        border:0px;
+        height:400px;
+        width: 270px;
+    }
+    .poster{
+        background-image: url('https://m.media-amazon.com/images/I/71TOLNXh9JL._AC_UF894,1000_QL80_.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover;
+        border-radius: 4px;
+        border:0px;
+        height:400px;
+        width: 270px;
+    }
+    .decor{
+        background-image: url('https://i.pinimg.com/originals/46/96/a2/4696a26cc6540d691af1b7ec5ff373e0.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:400px;
+        width: 270px;
+    }
+    .paint{
+        background-image: url('https://i.pinimg.com/originals/42/a8/07/42a807d434c3c51d7b23202146ebb305.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:400px;
+        width: 270px;
+    }
+    .accessories{
+        background-image: url('https://i.ebayimg.com/images/g/TlgAAOSwNFdga~WE/s-l400.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:400px;
+        width: 270px;
+    }
+    .comics{
+        height: 1700px;
+        margin:50px 10px 50px 10px;
+    }
+    .c{
+        /* margin-top: 5px;
+        margin-left: 500px;  */
+        text-align: center;
+        font-size: 30px;
+        color:rgb(211, 4, 4);
+        font-family: "Lucida Console", "Courier New", monospace;
+    }
+    .wrapper{
+        margin: 20px 0px 20px 0px;
+        width:100%;
+        height:500px;
+        background-image:url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/05/Doctor-Aphra-Star-Wars-feature.jpg');
+        border-radius: 10px;
+        background-size: 100% 100%;
+        animation: changeimage 20s linear infinite;
+        
+
+    }
+    @keyframes changeimage{
+        0%{
+            background-image: url("https://wallpaperaccess.com/full/3452138.jpg");
+             /* transform: translateX(0); */
+            
+        }
+        25%{
+            background-image: url("https://z9a5b9g5.stackpathcdn.com/wp-content/uploads/2022/07/kang-le-conquerant-origine-1024x576.jpg");
+            /* transform: translateX(0); */
+        }
+        50%{
+            background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/sins_of_sinister_card.jpg");
+            /* transform: translateX(-700); */
+        }
+        75%{
+            background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/wasp_card.jpg");
+            /* transform: translateX(-700); */
+        }
+        100%{
+            background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/wong_lny_card_image.jpg");
+            /* transform: translateX(-1400); */
+            
+        }
+    }
+    .first{
+        background-color: brown;
+    align-items:center;
+    margin:30px 20px 20px 30px;
+   }
+    
+    .demon{
+        background-image: url('https://www.previewsworld.com/SiteImage/MainImage/STL229911.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+    }
+   .avenger{ background-image: url('https://m.media-amazon.com/images/I/71iF8tT5FIL._SL1000_.jpg');
+        align-self: flex-end;
+        
+        margin-top:20px;
+        margin-left:200px;
+        margin-right: 200px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+   }
+   .dark{
+    background-image: url('https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2022/10/DARKWEBFIN2023001_cover.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+   }
+   .second{
+    align-items: center;
+    margin:30px 20px 20px 20px;
+   }
+   .venom{
+    background-image: url('https://i.pinimg.com/736x/c7/fb/f9/c7fbf994b04199f6874761813c2af79a.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 80px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+   }
+   .witch{
+    background-image: url('https://i.annihil.us/u/prod/marvel/i/mg/9/80/63b4782a27dcf/clean.jpg');
+        margin-top:20px;
+        margin-left:60px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+   }
+   .third{
+    align-items: center;
+    margin:30px 20px 20px 20px;
+   }
+   .wanda{
+    background-image: url('https://i.pinimg.com/736x/86/d0/86/86d08634e8cb8e51aecdb9b871562bb2.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+   }
+   .sana{
+    background-image: url('https://www.animationxpress.com/wp-content/uploads/2022/11/Sana-Starros.webp');
+        margin-top:20px;
+        margin-left:200px;
+        margin-right: 200px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+   }
+   .knight{
+    background-image: url('https://w0.peakpx.com/wallpaper/518/678/HD-wallpaper-moon-knight-batman-comic-marc-spector-marvel-marvel-comic-night-superheroe.jpg');
+        margin-top:20px;
+        margin-left:20px;
+        margin-right: 10px;
+        align-self: flex-end;
+        background-repeat: no-repeat;
+        background-size:cover; 
+        border:0px;
+        border-radius: 4px;
+        height:300px;
+        width: 200px;
+   }
+   .book p{
+    text-align: center;
+    color: rgb(89, 0, 0);
+    font-size: 20px;
+   }
+   .book button:hover{
+    transform: scale(1.02);
+        transition:transform .1s ease;
+   }
+   .latest{
+    font-size: 50px;
+    color: rgb(116, 0, 0);
+   }
+   .insider{
+    height:350px;
+    background-color: black;
+    margin:150px 0 0px 0;
+   }
+   .img{
+    background-image: url('https://i.annihil.us/u/prod/marvel/html_blocks_assets/loyalty/images/marvel_insider_master.jpg');
+    height:350px;
+    width:670px;
+    margin:0 600px 0 130px;
+    background-size: contain;
+   }
+   .in{
+    font-size: 20px;
+    text-align: center;
+    margin:80px 40px 20px -600px;
+    color:rgb(211, 4, 4);
+    font-family: "Lucida Console", "Courier New", monospace;
+   }
+   .watch{
+    font-size:30px;
+    color: white;
+    margin:0px 40px 10px -420px;
+   }
+   .reward{
+    font-size:15px;
+    color: white;
+    margin:0 30px 10px -435px; 
+   }
+   .join{
+    font-size: 15px;
+    background-color: rgb(171, 10, 10);
+    height:50px;
+    width:120px;
+    margin:0px 40px 10px -350px;
+   }
+   .join:hover{
+    box-shadow: 0 0 5px rgb(229, 14, 14);
+   }
+   .terms{
+    font-size:10px;
+    color: white;
+    margin:85px 40px 0 -360px;
+   }
+   .instagram{
+    margin-left: 10px;
+   }
+   .twitter{
+    margin-left:10px;
+   }.youtube{
+    margin-left:10px;
+   }
+
+   .logo{
+    height: 50px;
+    width: 100px;
+   }
+   #intro{
+    display: flex;
+    align-content: center;
+    
+   }
+   #intro div{
+        text-align: center;
+        font-size: 15px;
+        align-content: center;
+        align-items: center;
+        margin:10px;
+        width: 100%;
+   }
